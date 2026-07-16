@@ -177,8 +177,8 @@
   #modele .section-head>div{display:contents}
   #modele .section-head .eyebrow{display:none}
   #modele .section-head h2{font-size:21px;white-space:nowrap}
-  #modele .section-head>p{margin:0 0 1px;font-size:0;color:var(--red);font-weight:900}
-  #modele .section-head>p:after{content:'VEZI TOATE  →';font-size:12px;white-space:nowrap}
+  #modele .section-head>p{display:none}
+  .models-toggle{display:inline-flex;align-items:center;border:0;background:transparent;padding:4px 0;margin:0 0 1px;color:var(--red);font:inherit;font-size:12px;font-weight:900;white-space:nowrap;cursor:pointer}
   .model-grid{gap:12px;padding-bottom:15px}
   .model-card{flex-basis:145px;max-width:145px;border-radius:9px}
   .model-card img{height:116px}
@@ -230,3 +230,10 @@ button.category-card{width:100%;border:0;background:#fff}
   .detail-card strong{font-size:10px}
 }
 @media(max-width:390px){.category-grid-six{gap:6px}.category-grid-six .category-card>img{height:72px}.detail-card img{height:145px}}
+
+.models-toggle{display:none}
+@media(max-width:620px){
+  .models-toggle{display:inline-flex}
+  #modele .model-grid.expanded{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;margin-left:0;margin-right:0;padding-left:0;padding-right:0;scroll-snap-type:none}
+  #modele .model-grid.expanded .model-card{max-width:none;flex-basis:auto;width:100%}
+}
