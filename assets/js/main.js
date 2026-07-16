@@ -4,13 +4,18 @@ menuBtn.addEventListener('click',()=>{const o=mobileNav.classList.toggle('open')
 const galleryData={
  caramida:{title:'Model Cărămidă',imgs:['assets/img/g-caramida1.webp','assets/img/g-caramida2.webp','assets/img/g-caramida3.webp']},
  colt:{title:'Model Colț',imgs:['assets/img/g-colt1.webp','assets/img/g-colt2.webp']},
+ nord:{title:'Model Nord',imgs:['assets/img/g-nord1.webp']},
  delta:{title:'Model Delta',imgs:['assets/img/g-delta1.webp']},
  orient:{title:'Model Orient',imgs:['assets/img/g-orient1.webp','assets/img/g-orient2.webp']},
  cub:{title:'Model Cub',imgs:['assets/img/g-cub1.webp','assets/img/g-cub2.webp','assets/img/g-cub3.webp']},
  urban:{title:'Model Urban',imgs:['assets/img/g-urban1.webp','assets/img/g-urban2.webp']},
  antic:{title:'Model Antic',imgs:['assets/img/g-antic1.webp']},
  yeti:{title:'Dale YETI',imgs:['assets/img/g-yeti1.webp','assets/img/g-yeti2.webp']},
- tuburi:{title:'Tuburi din beton',imgs:['assets/img/g-tuburi1.webp','assets/img/g-tuburi2.webp']}
+ tuburi:{title:'Tuburi din beton',imgs:['assets/img/g-tuburi1.webp','assets/img/g-tuburi2.webp']},
+ borduri:{title:'Borduri din beton',imgs:['assets/img/g-borduri1.webp','assets/img/g-borduri2.webp','assets/img/g-borduri3.webp','assets/img/g-borduri4.webp']},
+ rigole:{title:'Rigole din beton',imgs:['assets/img/g-rigole1.webp','assets/img/g-rigole2.webp','assets/img/g-rigole3.webp']},
+ capace:{title:'Capace gard / stâlp',imgs:['assets/img/g-capace1.webp','assets/img/g-capace2.webp']},
+ piatra:{title:'Piatră decorativă din beton',imgs:['assets/img/g-piatra1.webp','assets/img/g-piatra2.webp','assets/img/g-piatra3.webp','assets/img/g-piatra4.webp']}
 };
 const lb=document.querySelector('.lightbox'),lbImg=lb.querySelector('img'),cap=lb.querySelector('.lb-caption');let current=[],idx=0,title='';
 function show(){lbImg.src=current[idx];cap.textContent=title+(current.length>1?` • ${idx+1}/${current.length}`:'');}
