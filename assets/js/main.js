@@ -25,14 +25,3 @@ document.querySelectorAll('[data-gallery]').forEach(b=>b.addEventListener('click
 lb.querySelector('.lb-close').onclick=closeLB;lb.querySelector('.lb-next').onclick=()=>{idx=(idx+1)%current.length;show()};lb.querySelector('.lb-prev').onclick=()=>{idx=(idx-1+current.length)%current.length;show()};lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')lb.querySelector('.lb-next').click();if(e.key==='ArrowLeft')lb.querySelector('.lb-prev').click()});
 const inputs=['length','width','waste'].map(id=>document.getElementById(id));function calc(){const l=+inputs[0].value||0,w=+inputs[1].value||0,r=+inputs[2].value||0;const base=l*w,total=base*(1+r/100);document.getElementById('total').textContent=total.toFixed(1)+' m²';document.getElementById('calcWa').href='https://wa.me/40741051193?text='+encodeURIComponent(`Bună ziua, doresc o ofertă pentru aproximativ ${total.toFixed(1)} m² de pavaj (suprafață ${base.toFixed(1)} m² + rezervă ${r}%).`);}
 inputs.forEach(i=>i.addEventListener('input',calc));
-
-const modelsToggle=document.querySelector('.models-toggle');
-const modelList=document.getElementById('model-list');
-if(modelsToggle&&modelList){
-  modelsToggle.addEventListener('click',()=>{
-    const expanded=modelList.classList.toggle('expanded');
-    modelsToggle.setAttribute('aria-expanded',String(expanded));
-    modelsToggle.textContent=expanded?'ASCUNDE ↑':'VEZI TOATE →';
-    if(!expanded) document.getElementById('modele')?.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-}
